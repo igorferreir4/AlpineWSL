@@ -1,75 +1,76 @@
 # AlpineWSL
-Alpine Linux on WSL (Windows 10 1803 or later)
-based on [wsldl](https://github.com/yuk7/wsldl)
+## [Repositório Oficial/Original](https://github.com/yuk7/AlpineWSL)
+
+Alpine Linux no WSL (Windows 10 1803 ou mais recentes)
+Baseado no [wsldl](https://github.com/yuk7/wsldl)
 
 ![screenshot](https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Alpine_Arch_Cent.png)
 
 
 ### [Download](https://github.com/igorferreir4/AlpineWSL/releases/latest)
 
-## Redirecionar portas do WSL para o PC
-* Baixar os arquivos "PortasWSL.ps1" e "Redirecionar-portas-WSL-para-PC.bat"
+## Redirecionar portas do WSL para o HOST (PC)
+* Baixar os arquivos "PortasWSL.ps1" e "Redirecionar-portas-WSL-para-HOST.bat"
 * Colocar ambos na mesma pasta, editar o arquivo "PortasWSL.ps1" e colocar as portas que precisa.
-* Executar "Redirecionar-portas-WSL-para-PC.bat"
+* Executar "Redirecionar-portas-WSL-para-HOST.bat"
 
-## Requirements
-* Windows 10 1803 April 2018 Update x64/arm64 or later.
-* Windows Subsystem for Linux feature is enabled.
+## Requisitos
+* Windows 10 1803 April 2018 Update x64/arm64 ou mais recentes.
+* Windows Subsystem for Linux (WSL) ativado.
 
-## Install
-#### 1. [Download](https://github.com/igorferreir4/AlpineWSL/releases/latest) installer zip
+## Instalação
+#### 1. [Download](https://github.com/igorferreir4/AlpineWSL/releases/latest) do instalador em formato zip
 
-#### 2. Extract all files in zip file to same directory
+#### 2. Extrair todos os arquivos para uma mesma pasta
 
-#### 3.Run Alpine.exe to Extract rootfs and Register to WSL
-Exe filename is using to the instance name to register.
-If you rename it, you can register with a different name and have multiple installs.
+#### 3. Executar Alpine.exe para extrair os arquivos e registrar no WSL
+O nome do arquivo .exe será o nome da instância a ser registrada no WSL.
+Se você renomea-lo, poderá registar com um nome diferente e ter varias instâncias.
 
 
-## How-to-Use(for Installed Instance)
-#### exe Usage
+## Como usar(para instâncias já instaladas)
+#### Argumentos passados para o .exe
 ```dos
-Usage :
-    <no args>
-      - Open a new shell with your default settings.
+Argumentos:
+    <sem argumentos>
+      - Abre um novo terminal (shell) com as configurações padrões.
 
-    run <command line>
-      - Run the given command line in that instance. Inherit current directory.
+    run <comando>
+      - Será executado o comando na instância. Será utilizado o diretório principal da conta usada na instância.
 
-    runp <command line (includes windows path)>
-      - Run the given command line in that instance after converting its path.
+    runp <comando (inclui o caminho do Windows)>
+      - Será executado o comando na instância após converter seu caminho.
 
-    config [setting [value]]
-      - `--default-user <user>`: Set the default user of this instance to <user>.
-      - `--default-uid <uid>`: Set the default user uid of this instance to <uid>.
-      - `--append-path <true|false>`: Switch of Append Windows PATH to $PATH
-      - `--mount-drive <true|false>`: Switch of Mount drives
-      - `--default-term <default|wt|flute>`: Set default type of terminal window.
+    config [comando [valor]]
+      - `--default-user <usuário>`: Define o usuário padrão da instância para <usuário>.
+      - `--default-uid <uid>`: Define o UID do usuário padrão da instância para <uid>.
+      - `--append-path <true|false>`: Adiciona ou Retira o diretório do Windows do $PATH
+      - `--mount-drive <true|false>`: Ativa ou desativa a montagem dos discos do HOST em /mnt
+      - `--default-term <default|wt>`: Define o tipo padrão da janela do terminal. (default = cmd / wt = Windows Terminal)
 
-    get [setting]
-      - `--default-uid`: Get the default user uid in this instance.
-      - `--append-path`: Get true/false status of Append Windows PATH to $PATH.
-      - `--mount-drive`: Get true/false status of Mount drives.
-      - `--wsl-version`: Get the version os the WSL (1/2) of this instance.
-      - `--default-term`: Get Default Terminal type of this instance launcher.
-      - `--lxguid`: Get WSL GUID key for this instance.
+    get [comando]
+      - `--default-uid`: Obtem o UID do usuário padrão da instância.
+      - `--append-path`: Obtem a informação se o diretório do Windows está no $PATH.
+      - `--mount-drive`: Obtem a informação se os discos do HOST estão sendo montados.
+      - `--wsl-version`: Obtem a informação de qual a versão do WSL para esta instância.
+      - `--default-term`: Obtem a informação de qual o tipo de terminal para esta instância.
+      - `--lxguid`: Obtem o WSL GUID dessa instância.
 
-    backup [contents]
-      - `--tar`: Output backup.tar to the current directory.
-      - `--reg`: Output settings registry file to the current directory.
+    backup [comando]
+      - `--tar`: Cria o arquivo backup.tar no diretório atual.
+      - `--reg`: Cria o arquivo de configurações do registro no diretório atual.
 
     clean
-      - Uninstall that instance.
+      - Remove a instância.
 
     help
-      - Print this usage message.
+      - Mostra toda essa lista de argumentos (em inglês).
 ```
 
 
-#### How to uninstall instance
+#### Como remover a instância
 ```dos
 >Alpine.exe clean
-
 ```
 
 ## How-to-Build
