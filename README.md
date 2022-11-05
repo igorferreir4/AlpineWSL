@@ -4,20 +4,20 @@ based on [wsldl](https://github.com/yuk7/wsldl)
 
 ![screenshot](https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Alpine_Arch_Cent.png)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yuk7/AlpineWSL/Build%20Zip%20CI?style=flat-square)](https://github.com/yuk7/AlpineWSL/actions/workflows/build-zip.yaml)
-[![Github All Releases](https://img.shields.io/github/downloads/yuk7/AlpineWSL/total.svg?style=flat-square)](https://github.com/yuk7/AlpineWSL/releases/latest)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![License](https://img.shields.io/github/license/yuk7/AlpineWSL.svg?style=flat-square)
 
-### [Download](https://github.com/yuk7/AlpineWSL/releases/latest)
+### [Download](https://github.com/igorferreir4/AlpineWSL/releases/latest)
 
+## Redirecionar portas do WSL para o PC
+* Baixar os arquivos "PortasWSL.ps1" e "Redirecionar-portas-WSL-para-PC.bat"
+* Colocar ambos na mesma pasta, editar o arquivo "PortasWSL.ps1" e colocar as portas que precisa.
+* Executar "Redirecionar-portas-WSL-para-PC.bat"
 
 ## Requirements
 * Windows 10 1803 April 2018 Update x64/arm64 or later.
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
-#### 1. [Download](https://github.com/yuk7/AlpineWSL/releases/latest) installer zip
+#### 1. [Download](https://github.com/igorferreir4/AlpineWSL/releases/latest) installer zip
 
 #### 2. Extract all files in zip file to same directory
 

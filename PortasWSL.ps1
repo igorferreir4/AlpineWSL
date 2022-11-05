@@ -47,3 +47,5 @@ foreach ($port in $ports) {
 
 $windows_ipv4 = (Get-NetIPAddress | Where-Object { $_.AddressState -eq "Preferred" -and $_.PrefixOrigin -eq "DHCP" }).IPAddress
 echo "Use $windows_ipv4 & port # to connect to site from other devices on local network."
+
+pause
