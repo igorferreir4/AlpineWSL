@@ -1,5 +1,5 @@
 # AlpineWSL
-## [Repositório Oficial/Original](https://github.com/yuk7/AlpineWSL)
+## [Link para o repositório Oficial/Original](https://github.com/yuk7/AlpineWSL)
 
 Alpine Linux no WSL (Windows 10 1803 ou mais recentes)
 Baseado no [wsldl](https://github.com/yuk7/wsldl)
